@@ -12,6 +12,13 @@ REPO_NAME=$(git_get_remote_name)
 REPO_PATH="${THIS_FILE_DIR}/../../"
 unset THIS_FILE_DIR
 
-FLY_OS=windows FUNCTIONS="ci/winc-release/helpers/build-binaries.ps1" MAPPING='Build-Groot=src/code.cloudfoundry.org/groot-windows
-Build-Winc-Network=src/code.cloudfoundry.org/winc/cmd/winc-network
-Build-Winc=src/code.cloudfoundry.org/winc/cmd/winc' "$CI/bin/fly-exec.bash" build-binaries -i repo="${REPO_PATH}" -o built-binaries="${BUILT_BINARIES}"
+if [[ "${WITH_CLEAN:-no}" == "yes" ]]; then
+  rm -rf "${BUILT_BINARIES}"
+fi
+
+if [[ ! -d "${BUILT_BINARIES}" ]]; then
+  FLY_OS=windows FUNCTIONS="ci/winc-release/helpers/build-binaries.ps1" MAPPING='Build-Groot=src/code.cloudfoundry.org/groot-windows
+  Build-Winc-Network=src/code.cloudfoundry.org/winc/cmd/winc-network
+  Build-Winc=src/code.cloudfoundry.org/winc/cmd/winc' \
+    "$CI/bin/fly-exec.bash" build-binaries -i repo="${REPO_PATH}" -o built-binaries="${BUILT_BINARIES}"
+fi

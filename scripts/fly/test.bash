@@ -16,7 +16,9 @@ pushd $REPO_PATH > /dev/null
 bosh sync-blobs
 popd > /dev/null
 
-echo "Testing ${1}"
+package="${1}"
+shift 1
+echo "Testing ${package}"
 
 ROOTFS_ENVS='WINC_TEST_ROOTFS=docker:///cloudfoundry/windows2016fs:2019'
 ENVS="$ROOTFS_ENVS
@@ -24,5 +26,5 @@ ENVS="$ROOTFS_ENVS
 ${ENVS:-}" \
 FLY_OS=windows \
 FUNCTIONS='ci/winc-release/helpers/configure-binaries.ps1' \
-DIR="src/code.cloudfoundry.org/${1}" \
+DIR="src/code.cloudfoundry.org/${package}" \
 "$CI/bin/fly-exec.bash" run-bin-test -i repo="${REPO_PATH}" -i built-binaries="${BUILT_BINARIES}" -p
