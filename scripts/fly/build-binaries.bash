@@ -12,7 +12,7 @@ REPO_NAME=$(git_get_remote_name)
 REPO_PATH="${THIS_FILE_DIR}/../../"
 unset THIS_FILE_DIR
 
-if [[ "${WITH_CLEAN:-no}" == "yes" ]]; then
+if [[ "${CLEAN_CACHE:-no}" == "yes" ]]; then
   rm -rf "${BUILT_BINARIES}"
 fi
 
