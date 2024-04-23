@@ -28,8 +28,10 @@ files:
   - code.cloudfoundry.org/groot-windows/vendor/github.com/BurntSushi/toml/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/BurntSushi/toml/internal/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/go-winio/*.go # gosub
-  - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/go-winio/archive/tar/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/go-winio/backuptar/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/go-winio/internal/fs/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/go-winio/internal/socket/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/go-winio/internal/stringbuffer/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/go-winio/pkg/guid/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/hcsshim/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/hcsshim/internal/cow/*.go # gosub
