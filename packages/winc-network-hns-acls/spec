@@ -76,4 +76,3 @@ files:
   - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/unix/*.s # gosub
   - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/unix/*.c # gosub
   - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/windows/*.go # gosub
-  - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/windows/*.s # gosub

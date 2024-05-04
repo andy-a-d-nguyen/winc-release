@@ -181,6 +181,5 @@ files:
   - code.cloudfoundry.org/groot-windows/vendor/golang.org/x/sys/unix/*.s # gosub
   - code.cloudfoundry.org/groot-windows/vendor/golang.org/x/sys/unix/*.c # gosub
   - code.cloudfoundry.org/groot-windows/vendor/golang.org/x/sys/windows/*.go # gosub
-  - code.cloudfoundry.org/groot-windows/vendor/golang.org/x/sys/windows/*.s # gosub
   - code.cloudfoundry.org/groot-windows/vendor/gopkg.in/yaml.v2/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/gopkg.in/yaml.v3/*.go # gosub
