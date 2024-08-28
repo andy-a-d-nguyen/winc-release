@@ -63,8 +63,8 @@ files:
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/grpc/codes/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/grpc/connectivity/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/grpc/grpclog/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/grpc/grpclog/internal/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/grpc/internal/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/grpc/internal/grpclog/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/grpc/internal/status/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/grpc/serviceconfig/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/grpc/status/*.go # gosub
